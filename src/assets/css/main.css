@@ -1,0 +1,210 @@
+section.post {
+  padding: 20px 0; }
+  section.post hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #dad5e5;
+    padding: 0; }
+  section.post p {
+    margin: 0 auto; }
+  section.post div.post {
+    margin: 0 auto;
+    width: 60%; }
+    section.post div.post .avatar {
+      float: left;
+      text-align: center;
+      position: fixed;
+      margin-left: -70px; }
+      section.post div.post .avatar img {
+        width: 70px; }
+      section.post div.post .avatar p {
+        margin: 0 auto; }
+      section.post div.post .avatar .name {
+        font-weight: bold; }
+      section.post div.post .avatar .surname {
+        font-size: 10pt; }
+    section.post div.post .card {
+      float: left;
+      background-color: white;
+      width: 100%;
+      min-height: 200px;
+      border-top: 3px solid #513E76;
+      position: relative;
+      left: 10px;
+      border-left: 1px solid lightgray;
+      border-right: 1px solid lightgray;
+      padding: 10px;
+      margin-bottom: 10px; }
+      section.post div.post .card .header h3 {
+        margin: 0; }
+      section.post div.post .card .header p.date {
+        font-size: 10pt;
+        color: gray; }
+      section.post div.post .card .header hr {
+        margin-top: 7px; }
+      section.post div.post .card .content {
+        text-align: center; }
+        section.post div.post .card .content .user-shares {
+          text-align: left; }
+          section.post div.post .card .content .user-shares img {
+            width: 40px;
+            height: 40px; }
+          section.post div.post .card .content .user-shares ul {
+            right: 40px;
+            position: relative; }
+            section.post div.post .card .content .user-shares ul li {
+              display: inline; }
+        section.post div.post .card .content .folders {
+          text-align: left; }
+          section.post div.post .card .content .folders ul {
+            right: 37px;
+            position: relative; }
+            section.post div.post .card .content .folders ul li {
+              color: white;
+              background-color: #513E76;
+              font-size: 8pt;
+              width: auto;
+              padding: 2px;
+              border-radius: 5px;
+              margin: 0px 2px;
+              display: inline-block; }
+        section.post div.post .card .content p {
+          color: gray;
+          text-align: left;
+          font-size: 11pt; }
+        section.post div.post .card .content img {
+          width: 100px;
+          height: 100px; }
+        section.post div.post .card .content ul {
+          list-style-type: none;
+          position: relative;
+          right: 20px; }
+          section.post div.post .card .content ul li {
+            margin: 10px 10px;
+            display: inline-block;
+            width: 100px; }
+            section.post div.post .card .content ul li p {
+              font-size: 9pt; }
+      section.post div.post .card .actions ul {
+        float: left;
+        list-style-type: none;
+        padding: 0;
+        margin: 0; }
+        section.post div.post .card .actions ul li {
+          display: inline;
+          cursor: pointer; }
+      section.post div.post .card .actions .md-button.md-hue-1.md-primary {
+        padding: 0 !important;
+        margin: 0 !important; }
+      section.post div.post .card .actions .md-button.md-primary.md-fab {
+        background-color: #513E76 !important; }
+      section.post div.post .card .actions .material-icons {
+        position: relative !important;
+        right: 5px !important; }
+      section.post div.post .card .actions .right {
+        float: right;
+        cursor: pointer; }
+  section.post div.comments {
+    clear: both;
+    background-color: #ded7ed;
+    width: 100%;
+    padding: 10px;
+    position: relative;
+    left: 10px;
+    border: 1px solid lightgray;
+    min-height: 67px;
+    height: auto;
+    bottom: 9px; }
+    section.post div.comments img {
+      width: 50px;
+      float: left; }
+    section.post div.comments .md-block {
+      width: 92%;
+      position: relative;
+      left: 60px; }
+    section.post div.comments md-input-container textarea.md-input {
+      position: relative;
+      bottom: 29px; }
+    section.post div.comments div.comment {
+      padding: 2px 0; }
+      section.post div.comments div.comment hr {
+        display: block;
+        height: 1px;
+        border: 0;
+        border-top: 1px solid #bdb7c9;
+        padding: 0; }
+      section.post div.comments div.comment p {
+        margin: 0 auto; }
+      section.post div.comments div.comment div.text {
+        float: left;
+        position: relative;
+        line-height: 8px;
+        left: 10px;
+        top: 15px; }
+        section.post div.comments div.comment div.text p {
+          margin: 0 auto; }
+      section.post div.comments div.comment p.name {
+        font-weight: bold; }
+      section.post div.comments div.comment p.date {
+        font-size: 10pt;
+        color: gray; }
+      section.post div.comments div.comment p.comment {
+        clear: both;
+        text-indent: 0px;
+        padding: 10px 0;
+        color: gray;
+        font-size: 10pt; }
+
+section.new-post {
+  padding: 20px; }
+  section.new-post div.new-post {
+    margin: 0 auto;
+    width: 60%;
+    background-color: white;
+    text-align: left;
+    padding: 20px;
+    left: 20px;
+    border-left: 1px solid lightgray;
+    border-right: 1px solid lightgray;
+    border-bottom: 1px solid lightgray;
+    border-top: 3px solid #513E76;
+    position: relative; }
+    section.new-post div.new-post form {
+      position: relative;
+      bottom: 30px; }
+      section.new-post div.new-post form button {
+        background-color: #513E76 !important;
+        position: relative;
+        bottom: 30px; }
+      section.new-post div.new-post form tags-input .input {
+        width: 270px !important; }
+      section.new-post div.new-post form tags-input .tags {
+        box-shadow: none;
+        border: none; }
+      section.new-post div.new-post form .tags ::-webkit-input-placeholder {
+        color: #C2C2C2;
+        font-size: 11pt; }
+      section.new-post div.new-post form tags-input .tags .tag-item {
+        background: none;
+        background-color: #513E76;
+        color: white;
+        border: none;
+        font-size: 10pt; }
+      section.new-post div.new-post form tags-input .tags .tag-item .remove-button {
+        color: white;
+        font-weight: normal;
+        font-size: 10pt; }
+      section.new-post div.new-post form .md-button.md-raised:not([disabled]) {
+        float: right; }
+    section.new-post div.new-post .material-icons {
+      float: left !important; }
+    section.new-post div.new-post h3 {
+      width: 150px; }
+
+.material-icons {
+  font-size: 14pt !important;
+  float: right !important; }
+
+html, body {
+  background-color: #F0F0F0; }

@@ -1,0 +1,105 @@
+
+<section class="new-post">
+  <div class="new-post">
+      <md-input-container class="md-block">
+        <label>Registrar uma nova nota, sintoma ou compartilhe algo sobre sua saúde.</label>
+        <textarea ng-model="newpost" lines="10" md-select-on-focus></textarea>
+      </md-input-container>
+      <form>
+        <tags-input ng-model="tags" placeholder="Pressione enter para inserir uma pasta"></tags-input>
+        <br>
+        <button class="md-raised md-primary md-button md-ink-ripple" type="button" aria-label="Primary"
+         ng-click="addPost(newpost, tags)">
+          <span class="ng-scope">Compartilhar</span>
+          <div class="md-ripple-container">
+          </div>
+        </button>
+      </form>
+  </div>
+</section>
+
+<section class="post">
+  <div class="post" ng-if="posts" ng-repeat="post in posts | orderBy: 'post_time'">
+    <div class="avatar">
+      <img ng-src="{{user.photo}}" title="{{user.name}}">
+      <p class="name"><strong>{{user.name.split(' ')[0]}}</strong></p>
+      <p class="surname">{{user.name.split(' ')[1]}}</p>
+    </div>
+
+    <div class="card">
+      <div class="header">
+        <p class="date">{{post.post_time | date:'dd/MM/yyyy'}}</p>
+        <br>
+      </div>
+
+      <div class="content">
+        <p>{{post.content}}</p>
+        <ul>
+          <li ng-repeat="file in post.files.split(',')">
+            <img ng-src="{{file}}" alt="">
+            <p>image.jpeg <i class="material-icons">cloud_download</i></p>
+          </li>
+        </ul>
+
+        <shares users="{{post.shares}}" ng-if="post"></shares>
+
+        <folders items="{{post.folders}}" ng-if="post"></folders>
+      </div>
+      <hr>
+
+      <div class="actions">
+        <button class="md-fab md-mini md-primary md-button md-ink-ripple" type="button" aria-label="Use Android">
+          <i class="material-icons">favorite</i></md-icon>
+          <md-tooltip>
+            Curtir
+          </md-tooltip>
+        <div class="md-ripple-container"></div>
+      </button>
+
+        <button class="md-fab md-mini md-primary md-button md-ink-ripple" type="button" aria-label="Use Android">
+          <i class="material-icons">share</i></md-icon>
+            <md-tooltip>
+              Compartilhar
+            </md-tooltip>
+          <div class="md-ripple-container"></div>
+        </button>
+
+        <button class="md-fab md-mini md-primary md-button md-ink-ripple right" type="button" aria-label="Use Android">
+          <i class="material-icons">menu</i></md-icon>
+          <md-tooltip>
+            Menu
+          </md-tooltip>
+          <div class="md-ripple-container"></div>
+        </button>
+      </div>
+    </div>
+
+    <div class="comments">
+      <div class="comment" ng-repeat="comment in comments" ng-if="comment.post == post.id">
+        <img ng-src="{{getPhoto(comment.created_by)}}" alt="">
+        <div class="text">
+          <p class="name">{{getUsername(comment.created_by)}}</p>
+          <br>
+          <p class="date">{{comment.created_at | date:'dd/MM/yyyy'}}</p>
+        </div>
+        <p class="comment">{{comment.content}}</p>
+        <hr>
+      </div>
+      <div class="post-comment">
+        <img ng-src="{{user.photo}}" alt="">
+        <form>
+          <md-input-container class="md-block">
+            <label>Deixe seu comentário</label>
+              <textarea ng-model="newcomment[$index]" md-maxlength="150" md-select-on-focus></textarea>
+          </md-input-container>
+          <button class="md-raised md-primary md-button md-ink-ripple" type="button"
+          aria-label="Primary" ng-click="addComment(post.id, $index)">
+            <span class="ng-scope">enviar comentário</span>
+            <div class="md-ripple-container">
+            </div>
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
